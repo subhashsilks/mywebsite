@@ -2,96 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subhash Silks – Sarees, Suits, Lehenga and Beyond</title>
 
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Top Bar / Nav (single row) -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="photos/logo.jpg" alt="Subhash Silks Logo" class="brand-logo" />
+      <span class="site-title">Subhash Silks</span>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero">
     <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
     <h1>Subhash Silks</h1>
-    <p>Sarees, Suits, Lehenga and Beyond</p>
+    <p class="tagline">Sarees, Suits, Lehenga and Beyond</p>
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery -->
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="photos/1.jpeg" alt="Gallery Photo 1" />
-      <img src="photos/2.jpeg" alt="Gallery Photo 2" />
-      <img src="photos/3.jpeg" alt="Gallery Photo 3" />
-      <img src="photos/4.jpeg" alt="Gallery Photo 4" />
-      <img src="photos/5.jpeg" alt="Gallery Photo 5" />
-      <img src="photos/6.jpeg" alt="Gallery Photo 6" />
-      <img src="photos/7.jpeg" alt="Gallery Photo 7" />
-      <img src="photos/8.jpeg" alt="Gallery Photo 8" />
-      <img src="photos/9.jpeg" alt="Gallery Photo 9" />
-      <img src="photos/10.jpeg" alt="Gallery Photo 10" />
-      <img src="photos/11.jpeg" alt="Gallery Photo 11" />
-      <img src="photos/12.jpeg" alt="Gallery Photo 12" />
-      <img src="photos/13.jpeg" alt="Gallery Photo 13" />
-      <img src="photos/14.jpeg" alt="Gallery Photo 14" />
-      <img src="photos/15.jpeg" alt="Gallery Photo 15" />
-      <img src="photos/16.jpeg" alt="Gallery Photo 16" />
-      <img src="photos/17.jpeg" alt="Gallery Photo 17" />
+      <img src="photos/1.jpeg" alt="Gallery Photo 1" loading="lazy" />
+      <img src="photos/2.jpeg" alt="Gallery Photo 2" loading="lazy" />
+      <img src="photos/3.jpeg" alt="Gallery Photo 3" loading="lazy" />
+      <img src="photos/4.jpeg" alt="Gallery Photo 4" loading="lazy" />
+      <img src="photos/5.jpeg" alt="Gallery Photo 5" loading="lazy" />
+      <img src="photos/6.jpeg" alt="Gallery Photo 6" loading="lazy" />
+      <img src="photos/7.jpeg" alt="Gallery Photo 7" loading="lazy" />
+      <img src="photos/8.jpeg" alt="Gallery Photo 8" loading="lazy" />
+      <img src="photos/9.jpeg" alt="Gallery Photo 9" loading="lazy" />
+      <img src="photos/10.jpeg" alt="Gallery Photo 10" loading="lazy" />
+      <img src="photos/11.jpeg" alt="Gallery Photo 11" loading="lazy" />
+      <img src="photos/12.jpeg" alt="Gallery Photo 12" loading="lazy" />
+      <img src="photos/13.jpeg" alt="Gallery Photo 13" loading="lazy" />
+      <img src="photos/14.jpeg" alt="Gallery Photo 14" loading="lazy" />
+      <img src="photos/15.jpeg" alt="Gallery Photo 15" loading="lazy" />
+      <img src="photos/16.jpeg" alt="Gallery Photo 16" loading="lazy" />
+      <img src="photos/17.jpeg" alt="Gallery Photo 17" loading="lazy" />
     </div>
   </section>
 
-  <!-- Google Reviews Embed -->
+  <!-- Reviews (Elfsight) -->
   <section id="reviews">
     <h2>Customer Reviews</h2>
     <div class="reviews-widget">
-      <!-- Elfsight Reviews Widget -->
       <script src="https://elfsightcdn.com/platform.js" async></script>
       <div class="elfsight-app-7841da1b-0493-4d64-b99e-9e8ca788d888" data-elfsight-app-lazy></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
       <p><strong>Address:</strong> Cinema Road, beside HDFC Bank, Pali road, Dehri, Bihar 821307</p>
+      <p><strong>Google Maps:</strong> <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" rel="noopener">View on Google Maps</a></p>
       <p><strong>Phone:</strong> <a href="tel:+918379095534">+91 8379095534</a></p>
       <p><strong>Email:</strong> <a href="mailto:info@subhashsilks.in">info@subhashsilks.in</a></p>
 
-      <div class="social-links">
-        <a href="https://facebook.com/subhashsilks" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/subhashsilks" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank"><i class="fab fa-google"></i></a>
+      <div class="social-links" aria-label="Social Media Links">
+        <a href="https://facebook.com/subhashsilks" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/subhashsilks" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" aria-label="Google Business"><i class="fab fa-google"></i></a>
       </div>
 
-      <!-- Leave a review button -->
-      <a href="https://search.google.com/local/writereview?placeid=ChIJ8xhI0q-pjTkRTE5hMV4mQyA" 
-         target="_blank" 
+      <a href="https://search.google.com/local/writereview?placeid=ChIJ8xhI0q-pjTkRTE5hMV4mQyA"
+         target="_blank"
+         rel="noopener"
          class="review-button">
          ⭐ Leave a Google Review
       </a>
     </div>
   </section>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/918379095534?text=Hello%20Subhash%20Silks" 
-     class="whatsapp-float" 
-     target="_blank" 
-     aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <!-- Floating WhatsApp (fixed + highest z-index) -->
+  <a
+    href="https://wa.me/918379095534?text=Hello%20Subhash%20Silks%2C%20I%27m%20interested%20in%20your%20collection."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
 
 </body>
