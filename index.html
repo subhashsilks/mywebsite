@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subhash Silks – Sarees, Suits, Lehenga and Beyond</title>
-  <meta name="description" content="Subhash Silks in Dehri, Bihar offers Sarees, Suits, Lehengas and more. Visit us for premium ethnic wear and traditional fashion." />
-
   <style>
     * {
       margin: 0;
@@ -16,7 +14,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #f0f0f0; /* changed to grey */
+      background: #e0e0e0; /* grey background */
       color: #333;
     }
 
@@ -34,7 +32,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #f0f0f0; /* grey nav */
+      background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 1000;
     }
@@ -71,7 +69,7 @@
 
     /* Hero */
     #hero {
-      background-color: #f0f0f0; /* grey */
+      background-color: #f5f5f5;
       padding-top: 100px;
       padding-bottom: 40px;
       text-align: center;
@@ -129,9 +127,8 @@
 
     .gallery-grid img {
       width: 100%;
-      height: 220px; /* uniform size */
-      object-fit: contain; /* show full image */
-      background: #ddd; /* grey background behind images */
+      height: 220px; /* same fixed height */
+      object-fit: cover; /* ensures all images fill box */
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       cursor: pointer;
@@ -139,15 +136,15 @@
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
     /* Contact */
     #contact {
-      background: #e0e0e0; /* lighter grey */
+      background: #d6d6d6;
       color: #333;
       text-align: center;
-      padding: 50px 20px 60px;
+      padding: 50px 20px 80px;
       border-radius: 0 0 15px 15px;
       margin-top: 60px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -196,11 +193,11 @@
       color: #000;
     }
 
-    /* Review button (Blue) */
+    /* Leave review button */
     .review-button {
       display: inline-block;
       margin-top: 30px;
-      background: #007BFF; /* Blue */
+      background: #007bff; /* blue */
       color: white !important;
       padding: 12px 30px;
       font-size: 1.2rem;
@@ -216,27 +213,24 @@
       box-shadow: 0 6px 14px rgba(0, 86, 179, 0.7);
     }
 
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* WhatsApp Button */
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25D366;
+      color: white !important;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+      text-decoration: none;
+      transition: background 0.3s ease;
     }
 
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
+    .whatsapp-button:hover {
+      background: #1da851;
+      box-shadow: 0 6px 14px rgba(29, 168, 81, 0.7);
     }
 
     html {
@@ -245,8 +239,27 @@
 
     /* Responsive */
     @media (max-width: 600px) {
+      nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+      }
+
+      nav li {
+        margin: 0 12px;
+        font-size: 1rem;
+      }
+
+      #hero h1 {
+        font-size: 2.2rem;
+      }
+
+      #hero p {
+        font-size: 1.1rem;
+      }
+
       .gallery-grid img {
-        height: 180px;
+        height: 160px;
       }
 
       .social-links {
@@ -254,10 +267,14 @@
         justify-content: center;
         gap: 20px;
       }
+
+      .social-links a {
+        font-size: 1.8rem;
+      }
     }
   </style>
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -273,7 +290,7 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <img src="photos/logo.jpg" alt="Subhash Silks Shop Logo" class="logo" />
+    <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
     <h1>Subhash Silks</h1>
     <p>Sarees, Suits, Lehenga and Beyond</p>
   </section>
@@ -282,23 +299,23 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="photos/1.jpeg" alt="Designer Saree - Style 1" loading="lazy" />
-      <img src="photos/2.jpeg" alt="Designer Saree - Style 2" loading="lazy" />
-      <img src="photos/3.jpeg" alt="Designer Saree - Style 3" loading="lazy" />
-      <img src="photos/4.jpeg" alt="Lehenga Collection - Style 1" loading="lazy" />
-      <img src="photos/5.jpeg" alt="Lehenga Collection - Style 2" loading="lazy" />
-      <img src="photos/6.jpeg" alt="Traditional Suit - Style 1" loading="lazy" />
-      <img src="photos/7.jpeg" alt="Traditional Suit - Style 2" loading="lazy" />
-      <img src="photos/8.jpeg" alt="Saree Collection - Style 4" loading="lazy" />
-      <img src="photos/9.jpeg" alt="Saree Collection - Style 5" loading="lazy" />
-      <img src="photos/10.jpeg" alt="Designer Saree - Style 6" loading="lazy" />
-      <img src="photos/11.jpeg" alt="Designer Saree - Style 7" loading="lazy" />
-      <img src="photos/12.jpeg" alt="Lehenga Collection - Style 3" loading="lazy" />
-      <img src="photos/13.jpeg" alt="Lehenga Collection - Style 4" loading="lazy" />
-      <img src="photos/14.jpeg" alt="Traditional Suit - Style 3" loading="lazy" />
-      <img src="photos/15.jpeg" alt="Traditional Suit - Style 4" loading="lazy" />
-      <img src="photos/16.jpeg" alt="Ethnic Wear Collection" loading="lazy" />
-      <img src="photos/17.jpeg" alt="Bridal Lehenga Collection" loading="lazy" />
+      <img src="photos/1.jpeg" alt="Gallery Photo 1" />
+      <img src="photos/2.jpeg" alt="Gallery Photo 2" />
+      <img src="photos/3.jpeg" alt="Gallery Photo 3" />
+      <img src="photos/4.jpeg" alt="Gallery Photo 4" />
+      <img src="photos/5.jpeg" alt="Gallery Photo 5" />
+      <img src="photos/6.jpeg" alt="Gallery Photo 6" />
+      <img src="photos/7.jpeg" alt="Gallery Photo 7" />
+      <img src="photos/8.jpeg" alt="Gallery Photo 8" />
+      <img src="photos/9.jpeg" alt="Gallery Photo 9" />
+      <img src="photos/10.jpeg" alt="Gallery Photo 10" />
+      <img src="photos/11.jpeg" alt="Gallery Photo 11" />
+      <img src="photos/12.jpeg" alt="Gallery Photo 12" />
+      <img src="photos/13.jpeg" alt="Gallery Photo 13" />
+      <img src="photos/14.jpeg" alt="Gallery Photo 14" />
+      <img src="photos/15.jpeg" alt="Gallery Photo 15" />
+      <img src="photos/16.jpeg" alt="Gallery Photo 16" />
+      <img src="photos/17.jpeg" alt="Gallery Photo 17" />
     </div>
   </section>
 
@@ -310,16 +327,7 @@
 
       <p>
         <strong>Google Maps:</strong>
-        <a href="https://www.google.com/maps/place/?q=place_id:ChIJ8xhI0q-pjTkRTE5hMV4mQyA" target="_blank" rel="noopener">
-          View on Google Maps
-        </a>
-      </p>
-
-      <p>
-        <strong>Google Business:</strong>
-        <a href="https://www.google.com/maps/place/?q=place_id:ChIJ8xhI0q-pjTkRTE5hMV4mQyA" target="_blank" rel="noopener" aria-label="Google Business Profile">
-          <i class="fab fa-google" style="color:#444; font-size:1.8rem; vertical-align: middle;"></i>
-        </a>
+        <a href="https://www.google.com/maps/dir//Cinema+Road,+beside+Hdfc+Bank,+Gandhi+Nagar,+Dehri,+Bihar+821307/" target="_blank" rel="noopener">View on Google Maps</a>
       </p>
 
       <p><strong>Phone:</strong> +91 8379095534</p>
@@ -328,6 +336,7 @@
       <div class="social-links" aria-label="Social Media Links">
         <a href="https://facebook.com/subhashsilks" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://instagram.com/subhashsilks" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" aria-label="Google Business"><i class="fab fa-google"></i></a>
       </div>
 
       <!-- Leave a review button -->
@@ -338,13 +347,17 @@
          aria-label="Leave a Google Review">
          ⭐ Leave a Google Review
       </a>
+
+      <!-- WhatsApp button -->
+      <a href="https://wa.me/918379095534" 
+         target="_blank" 
+         rel="noopener" 
+         class="whatsapp-button" 
+         aria-label="Chat on WhatsApp">
+         💬 Chat on WhatsApp
+      </a>
     </div>
   </section>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/918379095534" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
 
 </body>
 </html>
