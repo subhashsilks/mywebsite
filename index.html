@@ -14,7 +14,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #e0e0e0; /* grey background */
+      background: #f2f2f2; /* changed to grey */
       color: #333;
     }
 
@@ -69,7 +69,7 @@
 
     /* Hero */
     #hero {
-      background-color: #f5f5f5;
+      background-color: #ffffff;
       padding-top: 100px;
       padding-bottom: 40px;
       text-align: center;
@@ -121,14 +121,14 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
     }
 
     .gallery-grid img {
       width: 100%;
-      height: 220px; /* same fixed height */
-      object-fit: cover; /* ensures all images fill box */
+      height: 300px; /* same fixed height */
+      object-fit: cover; /* fills box, crops evenly */
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       cursor: pointer;
@@ -139,12 +139,30 @@
       transform: scale(1.05);
     }
 
+    /* Testimonials */
+    #testimonials {
+      background: #e0e0e0;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin: 60px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    #testimonials h2 {
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
     /* Contact */
     #contact {
-      background: #d6d6d6;
+      background: #eee;
       color: #333;
       text-align: center;
-      padding: 50px 20px 80px;
+      padding: 50px 20px 60px;
       border-radius: 0 0 15px 15px;
       margin-top: 60px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -197,7 +215,7 @@
     .review-button {
       display: inline-block;
       margin-top: 30px;
-      background: #007bff; /* blue */
+      background: #007bff; /* changed to blue */
       color: white !important;
       padding: 12px 30px;
       font-size: 1.2rem;
@@ -213,28 +231,31 @@
       box-shadow: 0 6px 14px rgba(0, 86, 179, 0.7);
     }
 
-    /* WhatsApp Button */
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 20px;
-      background: #25D366;
-      color: white !important;
-      padding: 12px 30px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .whatsapp-button:hover {
-      background: #1da851;
-      box-shadow: 0 6px 14px rgba(29, 168, 81, 0.7);
-    }
-
     html {
       scroll-behavior: smooth;
+    }
+
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
     }
 
     /* Responsive */
@@ -259,7 +280,7 @@
       }
 
       .gallery-grid img {
-        height: 160px;
+        height: 200px;
       }
 
       .social-links {
@@ -274,7 +295,7 @@
     }
   </style>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -284,42 +305,51 @@
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero">
     <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
     <h1>Subhash Silks</h1>
     <p>Sarees, Suits, Lehenga and Beyond</p>
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery -->
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="photos/1.jpeg" alt="Gallery Photo 1" />
-      <img src="photos/2.jpeg" alt="Gallery Photo 2" />
-      <img src="photos/3.jpeg" alt="Gallery Photo 3" />
-      <img src="photos/4.jpeg" alt="Gallery Photo 4" />
-      <img src="photos/5.jpeg" alt="Gallery Photo 5" />
-      <img src="photos/6.jpeg" alt="Gallery Photo 6" />
-      <img src="photos/7.jpeg" alt="Gallery Photo 7" />
-      <img src="photos/8.jpeg" alt="Gallery Photo 8" />
-      <img src="photos/9.jpeg" alt="Gallery Photo 9" />
-      <img src="photos/10.jpeg" alt="Gallery Photo 10" />
-      <img src="photos/11.jpeg" alt="Gallery Photo 11" />
-      <img src="photos/12.jpeg" alt="Gallery Photo 12" />
-      <img src="photos/13.jpeg" alt="Gallery Photo 13" />
-      <img src="photos/14.jpeg" alt="Gallery Photo 14" />
-      <img src="photos/15.jpeg" alt="Gallery Photo 15" />
-      <img src="photos/16.jpeg" alt="Gallery Photo 16" />
-      <img src="photos/17.jpeg" alt="Gallery Photo 17" />
+      <img src="photos/1.jpeg" alt="Gallery Photo 1" loading="lazy" />
+      <img src="photos/2.jpeg" alt="Gallery Photo 2" loading="lazy" />
+      <img src="photos/3.jpeg" alt="Gallery Photo 3" loading="lazy" />
+      <img src="photos/4.jpeg" alt="Gallery Photo 4" loading="lazy" />
+      <img src="photos/5.jpeg" alt="Gallery Photo 5" loading="lazy" />
+      <img src="photos/6.jpeg" alt="Gallery Photo 6" loading="lazy" />
+      <img src="photos/7.jpeg" alt="Gallery Photo 7" loading="lazy" />
+      <img src="photos/8.jpeg" alt="Gallery Photo 8" loading="lazy" />
+      <img src="photos/9.jpeg" alt="Gallery Photo 9" loading="lazy" />
+      <img src="photos/10.jpeg" alt="Gallery Photo 10" loading="lazy" />
+      <img src="photos/11.jpeg" alt="Gallery Photo 11" loading="lazy" />
+      <img src="photos/12.jpeg" alt="Gallery Photo 12" loading="lazy" />
+      <img src="photos/13.jpeg" alt="Gallery Photo 13" loading="lazy" />
+      <img src="photos/14.jpeg" alt="Gallery Photo 14" loading="lazy" />
+      <img src="photos/15.jpeg" alt="Gallery Photo 15" loading="lazy" />
+      <img src="photos/16.jpeg" alt="Gallery Photo 16" loading="lazy" />
+      <img src="photos/17.jpeg" alt="Gallery Photo 17" loading="lazy" />
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <!-- Elfsight Google Reviews -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-7841da1b-0493-4d64-b99e-9e8ca788d888" data-elfsight-app-lazy></div>
+  </section>
+
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
@@ -327,10 +357,10 @@
 
       <p>
         <strong>Google Maps:</strong>
-        <a href="https://www.google.com/maps/dir//Cinema+Road,+beside+Hdfc+Bank,+Gandhi+Nagar,+Dehri,+Bihar+821307/" target="_blank" rel="noopener">View on Google Maps</a>
+        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" rel="noopener">View on Google Maps</a>
       </p>
 
-      <p><strong>Phone:</strong> +91 8379095534</p>
+      <p><strong>Phone:</strong> <a href="tel:+918379095534">+91 8379095534</a></p>
       <p><strong>Email:</strong> <a href="mailto:info@subhashsilks.in">info@subhashsilks.in</a></p>
 
       <div class="social-links" aria-label="Social Media Links">
@@ -347,17 +377,14 @@
          aria-label="Leave a Google Review">
          ⭐ Leave a Google Review
       </a>
-
-      <!-- WhatsApp button -->
-      <a href="https://wa.me/918379095534" 
-         target="_blank" 
-         rel="noopener" 
-         class="whatsapp-button" 
-         aria-label="Chat on WhatsApp">
-         💬 Chat on WhatsApp
-      </a>
     </div>
   </section>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/918379095534?text=Hello%20Subhash%20Silks%2C%20I%20am%20interested%20in%20your%20collection" 
+     class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
