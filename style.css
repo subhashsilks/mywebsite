@@ -1,3 +1,4 @@
+/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Header & Navigation */
 header {
     background-color: #007BFF;
     color: white;
@@ -13,21 +15,205 @@ header {
     text-align: center;
 }
 
+nav {
+    margin-top: 10px;
+}
+
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 20px;
+nav a:hover {
+    color: #ddd;
+}
+
+/* Hero Section */
+#hero {
     background: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+#hero .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+#hero p {
+    font-size: 1.2rem;
+    color: #666;
 }
 
+/* Gallery */
+#gallery {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+#gallery h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #007BFF;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials */
+#testimonials {
+    background: white;
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+#testimonials h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Contact */
+#contact {
+    background: white;
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+#contact h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+.contact-info p, .contact-info a {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* Review Button */
+.review-button {
+    display: inline-block;
+    margin-top: 20px;
+    background: #007BFF;
+    color: white !important;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,123,255,0.4);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.review-button:hover {
+    background: #0056b3;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1500;
+}
+.whatsapp-float:hover {
+    background: #1ebc57;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
     background: #222;
     color: white;
+    margin-top: 40px;
+}
+
+/* Sticky Contact Bar (Mobile Only) */
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    border-top: 2px solid #ddd;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    z-index: 2000;
+}
+.sticky-cta a {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+}
+.sticky-cta a i {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    color: #007BFF;
+}
+.sticky-cta a:hover {
+    background: #f0f0f0;
+}
+@media (min-width: 768px) {
+    .sticky-cta { display: none; }
 }
