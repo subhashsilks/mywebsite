@@ -1,390 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subhash Silks – Sarees, Suits, Lehenga and Beyond</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: #f2f2f2; /* changed to grey */
-      color: #333;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Subhash Silks – Best collection of Sarees, Suits, and Lehenga in Dehri, Bihar. Visit us for exquisite ethnic wear.">
 
-    a {
-      color: #555;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+  <title>Subhash Silks – Sarees, Suits, Lehenga and Beyond</title>
 
-    a:hover {
-      color: #222;
-    }
+  <style>
+    /* [Your CSS code remains unchanged] */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: #f2f2f2; color: #333; }
+    a { color: #555; text-decoration: none; transition: color 0.3s ease; }
+    a:hover { color: #222; }
+    nav { position: fixed; top: 0; width: 100%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000; }
+    nav ul { display: flex; justify-content: center; align-items: center; list-style: none; padding: 1rem; flex-wrap: wrap; }
+    nav li { margin: 0 20px; font-weight: 600; font-size: 1.1rem; color: #555; }
+    nav li a { color: #555; }
+    nav li a:hover { color: #111; }
+    section { padding: 100px 20px 40px; max-width: 1000px; margin: auto; }
+    #hero { background-color: #ffffff; padding-top: 100px; padding-bottom: 40px; text-align: center; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    #hero .logo { width: 150px; height: 150px; border-radius: 50%; background: white; padding: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); object-fit: contain; }
+    #hero h1 { font-family: 'Georgia', serif; font-size: 3rem; margin-bottom: 0.3rem; color: #222; font-weight: 700; letter-spacing: 1.2px; }
+    #hero p { font-size: 1.4rem; font-weight: 300; color: #666; letter-spacing: 0.8px; }
+    #gallery { text-align: center; margin-top: 40px; }
+    #gallery h2 { margin-bottom: 20px; font-size: 2rem; color: #444; font-weight: 700; font-family: 'Georgia', serif; letter-spacing: 1.1px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.3s ease; }
+    .gallery-grid img:hover { transform: scale(1.05); }
+    #testimonials { background: #e0e0e0; padding: 60px 20px; text-align: center; border-radius: 15px; margin: 60px auto; max-width: 1000px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    #testimonials h2 { font-family: 'Georgia', serif; font-size: 2rem; margin-bottom: 30px; color: #222; }
+    #contact { background: #eee; color: #333; text-align: center; padding: 50px 20px 60px; border-radius: 0 0 15px 15px; margin-top: 60px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    #contact h2 { margin-bottom: 30px; font-size: 2.2rem; font-family: 'Georgia', serif; color: #222; }
+    .contact-info { max-width: 600px; margin: auto; font-size: 1.15rem; line-height: 1.8; font-weight: 500; color: #444; }
+    .contact-info p, .contact-info a { margin-bottom: 12px; display: block; color: #444; }
+    .contact-info a:hover { color: #111; text-decoration: underline; }
+    .social-links { margin-top: 30px; }
+    .social-links a { margin: 0 15px; font-size: 2rem; color: #666; transition: color 0.3s ease; }
+    .social-links a:hover { color: #000; }
+    .review-button { display: inline-block; margin-top: 30px; background: #007bff; color: white !important; padding: 12px 30px; font-size: 1.2rem; font-weight: 700; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5); text-decoration: none; transition: background 0.3s ease; }
+    .review-button:hover { background: #0056b3; box-shadow: 0 6px 14px rgba(0, 86, 179, 0.7); }
+    html { scroll-behavior: smooth; }
+    .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; transition: transform 0.3s ease; }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    @media (max-width: 600px) {
+      nav ul { flex-direction: row; justify-content: center; flex-wrap: nowrap; }
+      nav li { margin: 0 12px; font-size: 1rem; }
+      #hero h1 { font-size: 2.2rem; }
+      #hero p { font-size: 1.1rem; }
+      .gallery-grid img { height: 200px; }
+      .social-links { display: flex; justify-content: center; gap: 20px; }
+      .social-links a { font-size: 1.8rem; }
+    }
+  </style>
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    nav ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 0 20px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    nav li a {
-      color: #555;
-    }
-
-    nav li a:hover {
-      color: #111;
-    }
-
-    section {
-      padding: 100px 20px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    /* Hero */
-    #hero {
-      background-color: #ffffff;
-      padding-top: 100px;
-      padding-bottom: 40px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    #hero .logo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: white;
-      padding: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      object-fit: contain;
-    }
-
-    #hero h1 {
-      font-family: 'Georgia', serif;
-      font-size: 3rem;
-      margin-bottom: 0.3rem;
-      color: #222;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-    }
-
-    #hero p {
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: #666;
-      letter-spacing: 0.8px;
-    }
-
-    /* Gallery */
-    #gallery {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    #gallery h2 {
-      margin-bottom: 20px;
-      font-size: 2rem;
-      color: #444;
-      font-weight: 700;
-      font-family: 'Georgia', serif;
-      letter-spacing: 1.1px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 300px; /* same fixed height */
-      object-fit: cover; /* fills box, crops evenly */
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Testimonials */
-    #testimonials {
-      background: #e0e0e0;
-      padding: 60px 20px;
-      text-align: center;
-      border-radius: 15px;
-      margin: 60px auto;
-      max-width: 1000px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    #testimonials h2 {
-      font-family: 'Georgia', serif;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #222;
-    }
-
-    /* Contact */
-    #contact {
-      background: #eee;
-      color: #333;
-      text-align: center;
-      padding: 50px 20px 60px;
-      border-radius: 0 0 15px 15px;
-      margin-top: 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    #contact h2 {
-      margin-bottom: 30px;
-      font-size: 2.2rem;
-      font-family: 'Georgia', serif;
-      color: #222;
-    }
-
-    .contact-info {
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      font-weight: 500;
-      color: #444;
-    }
-
-    .contact-info p,
-    .contact-info a {
-      margin-bottom: 12px;
-      display: block;
-      color: #444;
-    }
-
-    .contact-info a:hover {
-      color: #111;
-      text-decoration: underline;
-    }
-
-    .social-links {
-      margin-top: 30px;
-    }
-
-    .social-links a {
-      margin: 0 15px;
-      font-size: 2rem;
-      color: #666;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #000;
-    }
-
-    /* Leave review button */
-    .review-button {
-      display: inline-block;
-      margin-top: 30px;
-      background: #007bff; /* changed to blue */
-      color: white !important;
-      padding: 12px 30px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5);
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .review-button:hover {
-      background: #0056b3;
-      box-shadow: 0 6px 14px rgba(0, 86, 179, 0.7);
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Floating WhatsApp button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: nowrap;
-      }
-
-      nav li {
-        margin: 0 12px;
-        font-size: 1rem;
-      }
-
-      #hero h1 {
-        font-size: 2.2rem;
-      }
-
-      #hero p {
-        font-size: 1.1rem;
-      }
-
-      .gallery-grid img {
-        height: 200px;
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      .social-links a {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Hero -->
-  <section id="hero">
-    <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
-    <h1>Subhash Silks</h1>
-    <p>Sarees, Suits, Lehenga and Beyond</p>
-  </section>
+  <!-- Hero -->
+  <section id="hero">
+    <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
+    <h1>Subhash Silks</h1>
+    <p>Sarees, Suits, Lehenga and Beyond</p>
+  </section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="photos/1.jpeg" alt="Gallery Photo 1" loading="lazy" />
-      <img src="photos/2.jpeg" alt="Gallery Photo 2" loading="lazy" />
-      <img src="photos/3.jpeg" alt="Gallery Photo 3" loading="lazy" />
-      <img src="photos/4.jpeg" alt="Gallery Photo 4" loading="lazy" />
-      <img src="photos/5.jpeg" alt="Gallery Photo 5" loading="lazy" />
-      <img src="photos/6.jpeg" alt="Gallery Photo 6" loading="lazy" />
-      <img src="photos/7.jpeg" alt="Gallery Photo 7" loading="lazy" />
-      <img src="photos/8.jpeg" alt="Gallery Photo 8" loading="lazy" />
-      <img src="photos/9.jpeg" alt="Gallery Photo 9" loading="lazy" />
-      <img src="photos/10.jpeg" alt="Gallery Photo 10" loading="lazy" />
-      <img src="photos/11.jpeg" alt="Gallery Photo 11" loading="lazy" />
-      <img src="photos/12.jpeg" alt="Gallery Photo 12" loading="lazy" />
-      <img src="photos/13.jpeg" alt="Gallery Photo 13" loading="lazy" />
-      <img src="photos/14.jpeg" alt="Gallery Photo 14" loading="lazy" />
-      <img src="photos/15.jpeg" alt="Gallery Photo 15" loading="lazy" />
-      <img src="photos/16.jpeg" alt="Gallery Photo 16" loading="lazy" />
-      <img src="photos/17.jpeg" alt="Gallery Photo 17" loading="lazy" />
-    </div>
-  </section>
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="photos/1.jpeg" alt="Gallery Photo 1" loading="lazy" />
+      <img src="photos/2.jpeg" alt="Gallery Photo 2" loading="lazy" />
+      <img src="photos/3.jpeg" alt="Gallery Photo 3" loading="lazy" />
+      <img src="photos/4.jpeg" alt="Gallery Photo 4" loading="lazy" />
+      <img src="photos/5.jpeg" alt="Gallery Photo 5" loading="lazy" />
+      <img src="photos/6.jpeg" alt="Gallery Photo 6" loading="lazy" />
+      <img src="photos/7.jpeg" alt="Gallery Photo 7" loading="lazy" />
+      <img src="photos/8.jpeg" alt="Gallery Photo 8" loading="lazy" />
+      <img src="photos/9.jpeg" alt="Gallery Photo 9" loading="lazy" />
+      <img src="photos/10.jpeg" alt="Gallery Photo 10" loading="lazy" />
+      <img src="photos/11.jpeg" alt="Gallery Photo 11" loading="lazy" />
+      <img src="photos/12.jpeg" alt="Gallery Photo 12" loading="lazy" />
+      <img src="photos/13.jpeg" alt="Gallery Photo 13" loading="lazy" />
+      <img src="photos/14.jpeg" alt="Gallery Photo 14" loading="lazy" />
+      <img src="photos/15.jpeg" alt="Gallery Photo 15" loading="lazy" />
+      <img src="photos/16.jpeg" alt="Gallery Photo 16" loading="lazy" />
+      <img src="photos/17.jpeg" alt="Gallery Photo 17" loading="lazy" />
+    </div>
+  </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <h2>What Our Customers Say</h2>
-    <!-- Elfsight Google Reviews -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-7841da1b-0493-4d64-b99e-9e8ca788d888" data-elfsight-app-lazy></div>
-  </section>
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-7841da1b-0493-4d64-b99e-9e8ca788d888" data-elfsight-app-lazy></div>
+  </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p><strong>Address:</strong> Cinema Road, beside HDFC Bank, Pali road, Dehri, Bihar 821307</p>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Address:</strong> Cinema Road, beside HDFC Bank, Pali road, Dehri, Bihar 821307</p>
 
-      <p>
-        <strong>Google Maps:</strong>
-        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" rel="noopener">View on Google Maps</a>
-      </p>
+      <p>
+        <strong>Location:</strong>
+        <a href="https://goo.gl/maps/YourActualPlaceID" target="_blank" rel="noopener" aria-label="View on Google Maps">
+          <i class="fas fa-map-marker-alt"></i> View on Google Maps
+        </a>
+      </p>
 
-      <p><strong>Phone:</strong> <a href="tel:+918379095534">+91 8379095534</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@subhashsilks.in">info@subhashsilks.in</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+918379095534"><i class="fas fa-phone"></i> +91 8379095534</a></p>
 
-      <div class="social-links" aria-label="Social Media Links">
-        <a href="https://facebook.com/subhashsilks" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/subhashsilks" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" aria-label="Google Business"><i class="fab fa-google"></i></a>
-      </div>
+      <p><strong>Email:</strong> <a href="mailto:info@subhashsilks.in"><i class="fas fa-envelope"></i> info@subhashsilks.in</a></p>
 
-      <!-- Leave a review button -->
-      <a href="https://search.google.com/local/writereview?placeid=ChIJ8xhI0q-pjTkRTE5hMV4mQyA" 
-         target="_blank" 
-         rel="noopener" 
-         class="review-button" 
-         aria-label="Leave a Google Review">
-         ⭐ Leave a Google Review
-      </a>
-    </div>
-  </section>
+      <div class="social-links" aria-label="Social Media Links">
+        <a href="https://facebook.com/subhashsilks" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/subhashsilks" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://share.google/kWTbxEZrW3zGyhkCY" target="_blank" aria-label="Google Business"><i class="fab fa-google"></i></a>
+      </div>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/918379095534?text=Hello%20Subhash%20Silks%2C%20I%20am%20interested%20in%20your%20collection" 
-     class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJ8xhI0q-pjTkRTE5hMV4mQyA" target="_blank" rel="noopener" class="review-button" aria-label="Leave a Google Review">
+        ⭐ Leave a Google Review
+      </a>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/918379095534?text=Hello%20Subhash%20Silks%2C%20I%20am%20interested%20in%20your%20collection" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
+
 </html>
