@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subhash Silks – Sarees, Suits, Lehenga and Beyond</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -14,28 +12,28 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #f4f4f4;
+      background: #f9f9f9;
       color: #333;
     }
 
     a {
-      color: inherit;
+      color: #555; /* neutral grey */
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #222;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: #555555; /* changed to elegant grey */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 1000;
     }
 
@@ -45,56 +43,80 @@
       align-items: center;
       list-style: none;
       padding: 1rem;
-      background: #555555;
+      flex-wrap: wrap;
     }
 
     nav li {
       margin: 0 20px;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 1.1rem;
-    }
-
-    nav li a {
-      color: white;
-      transition: color 0.3s ease;
-    }
-
-    nav li a:hover {
-      color: #ff6600; /* warm accent */
-    }
-
-    /* Hero Section */
-    #hero {
-      /* Removed background image */
-      color: #222;
-      text-align: center;
-      padding: 120px 20px 80px;
-      background: #eaeaea;
-    }
-
-    #hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      margin-bottom: 0.3rem;
-      color: #222;
-    }
-
-    #hero p {
-      font-size: 1.3rem;
-      font-weight: 300;
       color: #555;
     }
 
-    /* Gallery Section */
-    #gallery {
-      padding: 60px 20px;
+    nav li a {
+      color: #555;
+    }
+
+    nav li a:hover {
+      color: #111;
+    }
+
+    section {
+      padding: 100px 20px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Hero */
+    #hero {
+      background-color: #ffffff;
+      padding-top: 100px;
+      padding-bottom: 40px;
       text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #hero .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      object-fit: contain;
+    }
+
+    #hero h1 {
+      font-family: 'Georgia', serif;
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+      color: #222;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    #hero p {
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #666;
+      letter-spacing: 0.8px;
+    }
+
+    /* Gallery */
+    #gallery {
+      text-align: center;
+      margin-top: 40px;
     }
 
     #gallery h2 {
-      font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #777777; /* grey heading */
+      font-size: 2rem;
+      color: #444;
+      font-weight: 700;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1.1px;
     }
 
     .gallery-grid {
@@ -103,83 +125,99 @@
       gap: 15px;
     }
 
-    /* Make all images uniform squares and cover with object-fit */
     .gallery-grid img {
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: 150px;
       object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
     .gallery-grid img:hover {
       transform: scale(1.05);
     }
 
-    /* Contact Section */
+    /* Contact */
     #contact {
-      background: #555555; /* grey background */
-      color: white;
+      background: #eee;
+      color: #333;
       text-align: center;
-      padding: 60px 20px;
-      border-radius: 15px;
+      padding: 50px 20px 60px;
+      border-radius: 0 0 15px 15px;
+      margin-top: 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     #contact h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      font-family: 'Georgia', serif;
+      color: #222;
     }
 
     .contact-info {
-      max-width: 800px;
+      max-width: 600px;
       margin: auto;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       line-height: 1.8;
+      font-weight: 500;
+      color: #444;
     }
 
     .contact-info p,
     .contact-info a {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: block;
-      color: white;
+      color: #444;
     }
 
-    /* Social Icons */
+    .contact-info a:hover {
+      color: #111;
+      text-decoration: underline;
+    }
+
     .social-links {
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .social-links a {
       margin: 0 15px;
       font-size: 2rem;
-      color: white;
+      color: #666;
       transition: color 0.3s ease;
-      display: inline-block;
     }
 
     .social-links a:hover {
-      color: #ff6600;
+      color: #000;
     }
 
-    /* Google Reviews (custom star rating) */
-    .google-reviews {
+    /* Leave review button */
+    .review-button {
+      display: inline-block;
       margin-top: 30px;
-      color: #ffcc00;
-      font-size: 1.8rem;
-      letter-spacing: 2px;
-      user-select: none;
+      background: #ff6600;
+      color: white !important;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(255, 102, 0, 0.5);
+      text-decoration: none;
+      transition: background 0.3s ease;
     }
-    .google-reviews span {
-      font-size: 2.2rem;
-      vertical-align: middle;
+
+    .review-button:hover {
+      background: #e65500;
+      box-shadow: 0 6px 14px rgba(230, 85, 0, 0.7);
     }
 
     html {
       scroll-behavior: smooth;
     }
 
+    /* Responsive Horizontal Menu on mobile */
     @media (max-width: 600px) {
       nav ul {
         flex-direction: row;
@@ -188,7 +226,7 @@
       }
 
       nav li {
-        margin: 0 10px;
+        margin: 0 12px;
         font-size: 1rem;
       }
 
@@ -197,16 +235,29 @@
       }
 
       #hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
-      /* Social icons smaller on mobile */
+      /* Gallery images fixed height */
+      .gallery-grid img {
+        height: 120px;
+      }
+
+      /* Contact section social links horizontal on mobile */
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
       .social-links a {
-        font-size: 1.6rem;
-        margin: 0 10px;
+        font-size: 1.8rem;
       }
     }
   </style>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
@@ -221,32 +272,32 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <img src="photos/logo.jpg" alt="Subhash Silks Logo" style="width:150px; height:150px; object-fit: contain; border-radius: 50%; background: white; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 20px;" />
+    <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
     <h1>Subhash Silks</h1>
     <p>Sarees, Suits, Lehenga and Beyond</p>
   </section>
 
   <!-- Gallery Section -->
   <section id="gallery">
-    <h2>Our Shop Photos</h2>
+    <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="photos/1.jpeg" alt="Shop Photo 1" />
-      <img src="photos/2.jpeg" alt="Shop Photo 2" />
-      <img src="photos/3.jpeg" alt="Shop Photo 3" />
-      <img src="photos/4.jpeg" alt="Shop Photo 4" />
-      <img src="photos/5.jpeg" alt="Shop Photo 5" />
-      <img src="photos/6.jpeg" alt="Shop Photo 6" />
-      <img src="photos/7.jpeg" alt="Shop Photo 7" />
-      <img src="photos/8.jpeg" alt="Shop Photo 8" />
-      <img src="photos/9.jpeg" alt="Shop Photo 9" />
-      <img src="photos/10.jpeg" alt="Shop Photo 10" />
-      <img src="photos/11.jpeg" alt="Shop Photo 11" />
-      <img src="photos/12.jpeg" alt="Shop Photo 12" />
-      <img src="photos/13.jpeg" alt="Shop Photo 13" />
-      <img src="photos/14.jpeg" alt="Shop Photo 14" />
-      <img src="photos/15.jpeg" alt="Shop Photo 15" />
-      <img src="photos/16.jpeg" alt="Shop Photo 16" />
-      <img src="photos/17.jpeg" alt="Shop Photo 17" />
+      <img src="photos/1.jpeg" alt="Gallery Photo 1" />
+      <img src="photos/2.jpeg" alt="Gallery Photo 2" />
+      <img src="photos/3.jpeg" alt="Gallery Photo 3" />
+      <img src="photos/4.jpeg" alt="Gallery Photo 4" />
+      <img src="photos/5.jpeg" alt="Gallery Photo 5" />
+      <img src="photos/6.jpeg" alt="Gallery Photo 6" />
+      <img src="photos/7.jpeg" alt="Gallery Photo 7" />
+      <img src="photos/8.jpeg" alt="Gallery Photo 8" />
+      <img src="photos/9.jpeg" alt="Gallery Photo 9" />
+      <img src="photos/10.jpeg" alt="Gallery Photo 10" />
+      <img src="photos/11.jpeg" alt="Gallery Photo 11" />
+      <img src="photos/12.jpeg" alt="Gallery Photo 12" />
+      <img src="photos/13.jpeg" alt="Gallery Photo 13" />
+      <img src="photos/14.jpeg" alt="Gallery Photo 14" />
+      <img src="photos/15.jpeg" alt="Gallery Photo 15" />
+      <img src="photos/16.jpeg" alt="Gallery Photo 16" />
+      <img src="photos/17.jpeg" alt="Gallery Photo 17" />
     </div>
   </section>
 
@@ -255,22 +306,36 @@
     <h2>Contact Us</h2>
     <div class="contact-info">
       <p><strong>Address:</strong> Cinema Road, beside HDFC Bank, Pali road, Dehri, Bihar 821307</p>
-      <p><strong>Google Maps:</strong> <a href="https://www.google.com/maps/dir//Cinema+Road,+beside+Hdfc+Bank,+Gandhi+Nagar,+Dehri,+Bihar+821307/@24.9009111,84.1037147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x398da9afd24818f3:0x2043265e31614e4c!2m2!1d84.1861162!2d24.9009337?entry=ttu" target="_blank" rel="noopener">View on Google Maps</a></p>
+
+      <p>
+        <strong>Google Maps:</strong>
+        <a href="https://www.google.com/maps/dir//Cinema+Road,+beside+Hdfc+Bank,+Gandhi+Nagar,+Dehri,+Bihar+821307/@24.9009111,84.1037147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x398da9afd24818f3:0x2043265e31614e4c!2m2!1d84.1861162!2d24.9009337?entry=ttu" target="_blank" rel="noopener">View on Google Maps</a>
+      </p>
+
+      <p>
+        <strong>Google Business:</strong>
+        <a href="https://g.page/r/CfYBi2EqH9AZEB0" target="_blank" rel="noopener" aria-label="Google Business Profile">
+          <i class="fab fa-google" style="color:#444; font-size:1.5rem; vertical-align: middle;"></i> Visit Our Business Page
+        </a>
+      </p>
+
       <p><strong>Phone:</strong> +91 8379095534</p>
       <p><strong>Email:</strong> <a href="mailto:info@subhashsilks.in">info@subhashsilks.in</a></p>
 
-      <!-- Social Links -->
       <div class="social-links" aria-label="Social Media Links">
         <a href="https://facebook.com/subhashsilks" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://instagram.com/subhashsilks" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://g.page/r/CfYBi2EqH9AZEB0" target="_blank" aria-label="Google Business"><i class="fab fa-google"></i></a>
       </div>
 
-      <!-- Custom Google Review Stars (static) -->
-      <div class="google-reviews" aria-label="Google Reviews">
-        <strong>Google Rating: </strong>
-        <span>★★★★★</span> (4.8/5 based on 150 reviews)
-      </div>
+      <!-- Leave a review button -->
+      <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" 
+         target="_blank" 
+         rel="noopener" 
+         class="review-button" 
+         aria-label="Leave a Google Review">
+         ⭐ Leave a Google Review
+      </a>
     </div>
   </section>
 
