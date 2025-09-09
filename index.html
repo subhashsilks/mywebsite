@@ -16,7 +16,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #f9f9f9;
+      background: #f0f0f0; /* changed to grey */
       color: #333;
     }
 
@@ -34,7 +34,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #fff;
+      background: #f0f0f0; /* grey nav */
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 1000;
     }
@@ -71,7 +71,7 @@
 
     /* Hero */
     #hero {
-      background-color: #ffffff;
+      background-color: #f0f0f0; /* grey */
       padding-top: 100px;
       padding-bottom: 40px;
       text-align: center;
@@ -129,8 +129,9 @@
 
     .gallery-grid img {
       width: 100%;
-      height: 150px;
-      object-fit: cover;
+      height: 220px; /* uniform size */
+      object-fit: contain; /* show full image */
+      background: #ddd; /* grey background behind images */
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       cursor: pointer;
@@ -138,12 +139,12 @@
     }
 
     .gallery-grid img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     /* Contact */
     #contact {
-      background: #eee;
+      background: #e0e0e0; /* lighter grey */
       color: #333;
       text-align: center;
       padding: 50px 20px 60px;
@@ -195,24 +196,47 @@
       color: #000;
     }
 
-    /* Leave review button */
+    /* Review button (Blue) */
     .review-button {
       display: inline-block;
       margin-top: 30px;
-      background: #ff6600;
+      background: #007BFF; /* Blue */
       color: white !important;
       padding: 12px 30px;
       font-size: 1.2rem;
       font-weight: 700;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(255, 102, 0, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5);
       text-decoration: none;
       transition: background 0.3s ease;
     }
 
     .review-button:hover {
-      background: #e65500;
-      box-shadow: 0 6px 14px rgba(230, 85, 0, 0.7);
+      background: #0056b3;
+      box-shadow: 0 6px 14px rgba(0, 86, 179, 0.7);
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
     }
 
     html {
@@ -221,27 +245,8 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      nav ul {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: nowrap;
-      }
-
-      nav li {
-        margin: 0 12px;
-        font-size: 1rem;
-      }
-
-      #hero h1 {
-        font-size: 2.2rem;
-      }
-
-      #hero p {
-        font-size: 1.1rem;
-      }
-
       .gallery-grid img {
-        height: 120px;
+        height: 180px;
       }
 
       .social-links {
@@ -249,14 +254,10 @@
         justify-content: center;
         gap: 20px;
       }
-
-      .social-links a {
-        font-size: 1.8rem;
-      }
     }
   </style>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -309,13 +310,15 @@
 
       <p>
         <strong>Google Maps:</strong>
-        <a href="https://www.google.com/maps/dir//Cinema+Road,+beside+Hdfc+Bank,+Gandhi+Nagar,+Dehri,+Bihar+821307/@24.9009111,84.1037147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x398da9afd24818f3:0x2043265e31614e4c!2m2!1d84.1861162!2d24.9009337?entry=ttu" target="_blank" rel="noopener">View on Google Maps</a>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJ8xhI0q-pjTkRTE5hMV4mQyA" target="_blank" rel="noopener">
+          View on Google Maps
+        </a>
       </p>
 
       <p>
         <strong>Google Business:</strong>
-        <a href="https://g.page/r/CfYBi2EqH9AZEB0" target="_blank" rel="noopener" aria-label="Google Business Profile">
-          <i class="fab fa-google" style="color:#444; font-size:1.5rem; vertical-align: middle;"></i> Visit Our Business Page
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJ8xhI0q-pjTkRTE5hMV4mQyA" target="_blank" rel="noopener" aria-label="Google Business Profile">
+          <i class="fab fa-google" style="color:#444; font-size:1.8rem; vertical-align: middle;"></i>
         </a>
       </p>
 
@@ -325,7 +328,6 @@
       <div class="social-links" aria-label="Social Media Links">
         <a href="https://facebook.com/subhashsilks" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://instagram.com/subhashsilks" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://g.page/r/CfYBi2EqH9AZEB0" target="_blank" aria-label="Google Business"><i class="fab fa-google"></i></a>
       </div>
 
       <!-- Leave a review button -->
@@ -338,6 +340,11 @@
       </a>
     </div>
   </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918379095534" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
