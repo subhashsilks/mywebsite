@@ -8,8 +8,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: #f2f2f2; /* grey base */
-  color: #444;         /* grey font */
+  background: #f2f2f2;
+  color: #444;
 }
 
 /* Navigation */
@@ -25,7 +25,7 @@ nav {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* keeps Home left */
+  justify-content: flex-start;
   padding: 0.5rem 1rem;
 }
 
@@ -93,7 +93,7 @@ nav li a:hover {
   background-position: center;
   z-index: -1;
   animation: changeBackground 40s infinite;
-  transition: background-image 1s ease-in-out; /* smooth fade */
+  transition: background-image 1s ease-in-out;
 }
 
 .logo {
@@ -120,7 +120,7 @@ nav li a:hover {
   color: #666;
 }
 
-/* Background slideshow animation */
+/* Background slideshow (using .jpg files) */
 @keyframes changeBackground {
   0%   { background-image: url("photos/bg1.jpg"); }
   10%  { background-image: url("photos/bg2.jpg"); }
@@ -278,5 +278,3 @@ nav li a:hover {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
-
-
