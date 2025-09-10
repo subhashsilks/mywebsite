@@ -122,17 +122,17 @@ nav li a:hover {
 
 /* Background slideshow animation */
 @keyframes changeBackground {
-  0%   { background-image: url("photos/bg1.jpeg"); }
-  10%  { background-image: url("photos/bg2.jpeg"); }
-  20%  { background-image: url("photos/bg3.jpeg"); }
-  30%  { background-image: url("photos/bg4.jpeg"); }
-  40%  { background-image: url("photos/bg5.jpeg"); }
-  50%  { background-image: url("photos/bg6.jpeg"); }
-  60%  { background-image: url("photos/bg7.jpeg"); }
-  70%  { background-image: url("photos/bg8.jpeg"); }
-  80%  { background-image: url("photos/bg9.jpeg"); }
-  90%  { background-image: url("photos/bg10.jpeg"); }
-  100% { background-image: url("photos/bg1.jpeg"); }
+  0%   { background-image: url("photos/bg1.jpg"); }
+  10%  { background-image: url("photos/bg2.jpg"); }
+  20%  { background-image: url("photos/bg3.jpg"); }
+  30%  { background-image: url("photos/bg4.jpg"); }
+  40%  { background-image: url("photos/bg5.jpg"); }
+  50%  { background-image: url("photos/bg6.jpg"); }
+  60%  { background-image: url("photos/bg7.jpg"); }
+  70%  { background-image: url("photos/bg8.jpg"); }
+  80%  { background-image: url("photos/bg9.jpg"); }
+  90%  { background-image: url("photos/bg10.jpg"); }
+  100% { background-image: url("photos/bg1.jpg"); }
 }
 
 /* Gallery */
@@ -278,4 +278,5 @@ nav li a:hover {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
 
