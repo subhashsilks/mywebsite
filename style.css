@@ -5,13 +5,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -66,7 +59,7 @@ nav li a:hover {
   color: #111;
 }
 
-/* Hero Section */
+/* Hero Section with Slideshow */
 #hero {
   position: relative;
   width: 100%;
@@ -76,7 +69,7 @@ nav li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000; /* background for letterboxing */
+  background: #000; /* fallback background */
 }
 
 .hero-slideshow {
@@ -85,40 +78,26 @@ nav li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-slideshow .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;        /* show full image */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;   /* 👈 full image visible */
   object-position: center;
-  background: #000;           /* black bars if needed */
+  background: #000;
+  position: absolute;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
 .hero-slideshow .slide.active {
   opacity: 1;
-}
-
-.hero-text {
-  position: relative; 
-  z-index: 2;
-  text-align: center;
-  color: #fff;
-  padding: 0 20px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-text p {
-  font-size: 1.4rem;
 }
 
 /* Gallery */
@@ -142,7 +121,8 @@ nav li a:hover {
 
 .gallery-grid img {
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -262,26 +242,4 @@ nav li a:hover {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-
-  .nav-logo {
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
-  }
-
-  nav li {
-    margin: 0 8px;
-    font-size: 0.95rem;
-  }
 }
