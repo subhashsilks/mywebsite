@@ -26,23 +26,19 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section id="hero">
     <div class="hero-slideshow">
-      <img src="photos/bg1.jpg" class="slide active" alt="Slide 1">
-      <img src="photos/bg2.jpg" class="slide" alt="Slide 2">
-      <img src="photos/bg3.jpg" class="slide" alt="Slide 3">
-      <img src="photos/bg4.jpg" class="slide" alt="Slide 4">
-      <img src="photos/bg5.jpg" class="slide" alt="Slide 5">
-      <img src="photos/bg6.jpg" class="slide" alt="Slide 6">
-      <img src="photos/bg7.jpg" class="slide" alt="Slide 7">
-      <img src="photos/bg8.jpg" class="slide" alt="Slide 8">
-      <img src="photos/bg9.jpg" class="slide" alt="Slide 9">
-      <img src="photos/bg10.jpg" class="slide" alt="Slide 10">
-    </div>
-    <div class="hero-text">
-      <h1>Subhash Silks</h1>
-      <p>Sarees, Suits, Lehenga and Beyond</p>
+      <img src="photos/bg1.jpg" alt="Slide 1" class="slide active" />
+      <img src="photos/bg2.jpg" alt="Slide 2" class="slide" />
+      <img src="photos/bg3.jpg" alt="Slide 3" class="slide" />
+      <img src="photos/bg4.jpg" alt="Slide 4" class="slide" />
+      <img src="photos/bg5.jpg" alt="Slide 5" class="slide" />
+      <img src="photos/bg6.jpg" alt="Slide 6" class="slide" />
+      <img src="photos/bg7.jpg" alt="Slide 7" class="slide" />
+      <img src="photos/bg8.jpg" alt="Slide 8" class="slide" />
+      <img src="photos/bg9.jpg" alt="Slide 9" class="slide" />
+      <img src="photos/bg10.jpg" alt="Slide 10" class="slide" />
     </div>
   </section>
 
@@ -113,20 +109,20 @@
 
   <!-- Slideshow Script -->
   <script>
-    const slides = document.querySelectorAll('.hero-slideshow .slide');
-    let current = 0;
+    let slides = document.querySelectorAll(".hero-slideshow .slide");
+    let index = 0;
 
-    function showSlide(index) {
+    function showSlide() {
       slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
       });
+      index = (index + 1) % slides.length;
     }
 
-    setInterval(() => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }, 4000); // 4 seconds
+    setInterval(showSlide, 4000);
   </script>
 </body>
 </html>
