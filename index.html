@@ -28,7 +28,18 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <img src="photos/logo.jpg" alt="Shop Logo" class="logo" />
+    <div class="hero-slideshow">
+      <img src="photos/bg1.jpg" alt="Slide 1" class="slide active">
+      <img src="photos/bg2.jpg" alt="Slide 2" class="slide">
+      <img src="photos/bg3.jpg" alt="Slide 3" class="slide">
+      <img src="photos/bg4.jpg" alt="Slide 4" class="slide">
+      <img src="photos/bg5.jpg" alt="Slide 5" class="slide">
+      <img src="photos/bg6.jpg" alt="Slide 6" class="slide">
+      <img src="photos/bg7.jpg" alt="Slide 7" class="slide">
+      <img src="photos/bg8.jpg" alt="Slide 8" class="slide">
+      <img src="photos/bg9.jpg" alt="Slide 9" class="slide">
+      <img src="photos/bg10.jpg" alt="Slide 10" class="slide">
+    </div>
     <h1>Subhash Silks</h1>
     <p>Sarees, Suits, Lehenga and Beyond</p>
   </section>
@@ -97,6 +108,20 @@
      aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- Hero Slideshow Script -->
+  <script>
+    const slides = document.querySelectorAll(".hero-slideshow .slide");
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }
+
+    setInterval(showNextSlide, 5000); // change every 5 seconds
+  </script>
 
 </body>
 </html>
