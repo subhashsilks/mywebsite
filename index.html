@@ -111,19 +111,22 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Hero Slideshow Script -->
+  <!-- Slideshow Script -->
   <script>
-    const slides = document.querySelectorAll(".hero-slideshow .slide");
+    const slides = document.querySelectorAll('.hero-slideshow .slide');
     let current = 0;
 
-    function showNextSlide() {
-      slides[current].classList.remove("active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("active");
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
     }
 
-    setInterval(showNextSlide, 5000); // 5 seconds per slide
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 4000); // 4 seconds
   </script>
-
 </body>
 </html>
