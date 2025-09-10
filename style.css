@@ -76,6 +76,7 @@ nav li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #000; /* background for letterboxing */
 }
 
 .hero-slideshow {
@@ -92,10 +93,9 @@ nav li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  object-fit: contain;        /* show full image */
+  object-position: center;
+  background: #000;           /* black bars if needed */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -105,7 +105,7 @@ nav li a:hover {
 }
 
 .hero-text {
-  position: relative; /* relative to #hero */
+  position: relative; 
   z-index: 2;
   text-align: center;
   color: #fff;
