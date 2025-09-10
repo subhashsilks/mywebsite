@@ -59,9 +59,12 @@ nav li a:hover {
   color: #111;
 }
 
-/* Hero */
+/* Hero Section */
 #hero {
-  background: #fff;
+  background-size: cover;
+  background-position: center;
+  animation: heroSlideshow 40s infinite;
+  transition: background-image 1s ease-in-out;
   padding: 120px 20px 60px;
   text-align: center;
   border-radius: 10px;
@@ -70,40 +73,13 @@ nav li a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Logo container with background slideshow */
-.hero-logo-container {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  margin: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-logo-container::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  animation: changeBackground 40s infinite;
-  transition: background-image 1s ease-in-out;
-}
-
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background: white;
-  padding: 10px;
   object-fit: contain;
-  z-index: 2;
+  margin-bottom: 20px;
+  background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
@@ -120,8 +96,8 @@ nav li a:hover {
   color: #666;
 }
 
-/* Background slideshow (using .jpg files) */
-@keyframes changeBackground {
+/* Background slideshow */
+@keyframes heroSlideshow {
   0%   { background-image: url("photos/bg1.jpg"); }
   10%  { background-image: url("photos/bg2.jpg"); }
   20%  { background-image: url("photos/bg3.jpg"); }
